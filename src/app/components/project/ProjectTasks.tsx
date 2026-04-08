@@ -135,8 +135,8 @@ const ProjectTasks = ({ project }: { project: projectType }) => {
       {/* Tasks List Container */}
       <div className="space-y-6">
         {tasks.length === 0 && (
-          <div className="flex flex-col items-center justify-center py-20 border-2 border-dashed border-white/5 rounded-[3rem] bg-neutral-900/10">
-            <LayoutGrid className="w-12 h-12 text-neutral-800 mb-4" />
+          <div className="flex flex-col items-center justify-center py-5  rounded-[3rem] bg-neutral-900/10">
+
             <NoItemFound title="Objective" />
           </div>
         )}

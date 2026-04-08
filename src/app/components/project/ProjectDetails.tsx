@@ -13,6 +13,7 @@ import { useGetPersonalProjectByIdQuery } from "../../redux/features/project/pro
 import AddMember from "./AddMemberTailwind";
 import ProjectDetailsLoading from "../loadingSkeletons/ProjectDetailsLoading";
 import ProjectDetailsLoadingTailwind from "../loadingSkeletons/ProjectDetailsLoadingTailwind";
+import ProjectDetailsAccordion from "./ProjectDetailsAccordion";
 
 const ProjectDetails = () => {
   const { id } = useParams();
@@ -27,7 +28,8 @@ const ProjectDetails = () => {
       {data?.success && (
         <>
           <Typography fontSize={30}>{data?.data?.name}</Typography>
-          <Accordion sx={{ marginBottom: "10px" }}>
+
+          {/* <Accordion sx={{ marginBottom: "10px" }}>
             <AccordionSummary
               sx={{
                 "&.MuiAccordionSummary-content": { padding: 0, margin: 0 },
@@ -41,7 +43,10 @@ const ProjectDetails = () => {
                 {data?.data?.description}
               </pre>
             </AccordionDetails>
-          </Accordion>
+          </Accordion> */}
+
+          <ProjectDetailsAccordion data={data?.data?.description} />
+
           {data?.data?.type == "team" && <AddMember project={data?.data} />}
           <ProjectTasks project={data?.data} />
         </>
