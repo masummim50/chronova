@@ -1,14 +1,13 @@
 import { useGetTodosQuery } from "../../redux/features/todo/todo.api";
-import Grid from "@mui/material/Grid";
+
 import { DndProvider } from "react-dnd/dist/core";
 import { HTML5Backend } from "react-dnd-html5-backend";
 
 import CompleteSection from "./CompleteSection";
 import PendingSection from "./PendingSection";
-import TodoPageLoading from "../loadingSkeletons/TodoPageLoading";
 import TodoPageLoadingTailwind from "../loadingSkeletons/TodoPageLoadingTailwind";
-import { blueGrey } from "@mui/material/colors";
-import { Box } from "@mui/material";
+
+import NoItemFound from "../project/NoItemFound";
 export const isDesktop = () => {
   const userAgent = navigator.userAgent;
   return !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -29,32 +28,20 @@ const TodoContainer = () => {
         <TodoPageLoadingTailwind />
       ) : todos?.data?.pending.length === 0 &&
         todos?.data?.completed.length === 0 ? (
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "200px",
-            background: blueGrey[100],
-            borderRadius: 2,
-            // color:"white",
-          }}
-        >
-          No todo has been added yet.
-        </Box>
+        <NoItemFound title="No todo has been added yet." />
       ) : (
         isSuccess &&
 
 
         <DndProvider backend={HTML5Backend}>
-          <Grid container spacing={2}>
+          <div className="grid grid-cols-2 gap-4"  >
             <PendingSection
               todos={todos?.data?.pending}
             />
             <CompleteSection
               todos={todos?.data?.completed}
             />
-          </Grid>
+          </div>
         </DndProvider>
       )}
     </div>

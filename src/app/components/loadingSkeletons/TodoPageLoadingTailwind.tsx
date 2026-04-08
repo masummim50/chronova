@@ -1,10 +1,9 @@
-
 import { motion } from "framer-motion";
 
 const SkeletonItem = ({ width = "100%", height = "40px", rounded = "2xl" }) => (
     <div
-        className={`w-full bg-neutral-800/50 rounded-${rounded} border border-white/5 relative overflow-hidden`}
-        style={{ height }}
+        className={`bg-neutral-800/50 rounded-${rounded} border border-white/5 relative overflow-hidden`}
+        style={{ height, width }}
     >
         <motion.div
             animate={{

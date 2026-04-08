@@ -36,7 +36,7 @@ export default function AssignTaskModal({
   type,
   subtaskid,
   subtaskIndex,
-  setExpanded,
+  // setExpanded,
 }: {
   projectId: string;
   taskid: string;
@@ -44,7 +44,7 @@ export default function AssignTaskModal({
   type: "task" | "subtask";
   subtaskid?: string;
   subtaskIndex?: number;
-  setExpanded: React.Dispatch<React.SetStateAction<boolean>>;
+  // setExpanded: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -69,7 +69,7 @@ export default function AssignTaskModal({
     setMemberId(userid);
     switch (type) {
       case "task":
-        setExpanded(false);
+        // setExpanded(false);
         assigntask({ projectid: projectId, taskid, userid, taskIndex });
         break;
       case "subtask":

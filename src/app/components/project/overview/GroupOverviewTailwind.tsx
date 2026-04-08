@@ -17,7 +17,6 @@ import { calcTime } from "../../../lib/helpers/timeCal";
 import { useAppSelector } from "../../../redux/hooks";
 import { RootState } from "../../../redux/store";
 import { useChangeProjectStatusMutation } from "../../../redux/features/project/project.api";
-import { subtaskType } from "../SubTaskCard";
 
 const MemberStat = ({ label, value, color }: { label: string; value: string | number; color: string }) => (
     <div className="flex flex-col gap-1 p-3 rounded-xl bg-neutral-950/30 border border-white/5">

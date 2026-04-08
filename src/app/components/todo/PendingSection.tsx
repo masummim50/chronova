@@ -76,7 +76,7 @@ const PendingSection = ({
   const sortLabels = ["Newest", "Oldest", "Priority ↑", "Priority ↓"];
 
   return (
-    <div className="flex flex-col h-full min-h-[500px] w-1/2">
+    <div className="flex flex-col h-full min-h-[500px] w-full">
       {/* Section Header */}
       <div className="flex items-center justify-between bg-blue-500/10 border border-blue-500/20 backdrop-blur-md px-5 py-4 rounded-2xl mb-6 shadow-sm relative overflow-hidden group">
         <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2" />

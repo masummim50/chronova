@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Plus, Zap, Sparkles } from "lucide-react";
-import SubTaskCard, { subtaskType } from "./SubTaskCardTailwind";
+import { subtaskType } from "./SubTaskCardTailwind";
 import { useLocation, useParams } from "react-router-dom";
 import { useCreateSubTaskMutation } from "../../redux/features/subtask/subtaskApi";
 import { useSelector } from "react-redux";
@@ -9,6 +9,7 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useGetPersonalProjectByIdQuery } from "../../redux/features/project/project.api";
 import SubtaskSortButtons from "./SubtaskSortButtons";
 import { getCurrentTimeString } from "../../lib/dateFunctions";
+import SubTaskCardTailwind from "./SubTaskCardTailwind";
 
 const SubTaskContainer = ({
   taskId,
@@ -124,7 +125,7 @@ const SubTaskContainer = ({
             return true;
           })
           .map((subtask: subtaskType, index: number) => (
-            <SubTaskCard
+            <SubTaskCardTailwind
               projectUser={projectUser}
               taskindex={taskindex}
               subtaskindex={index}

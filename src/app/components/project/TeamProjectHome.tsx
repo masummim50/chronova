@@ -64,7 +64,7 @@ const TeamProjectHome = () => {
         {isLoading && <ProjectCardsLoading />}
 
         {!isLoading && projects.length === 0 ? (
-          <NoItemFound title="Project" />
+          <NoItemFound title="No Project found" />
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
             {projects.map((project: projectType, index: number) => (

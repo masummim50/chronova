@@ -2,16 +2,12 @@ import { useParams } from "react-router-dom";
 import {
   Box,
   Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
 } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ProjectTasks from "./ProjectTasks";
 
 import { useGetPersonalProjectByIdQuery } from "../../redux/features/project/project.api";
 import AddMember from "./AddMemberTailwind";
-import ProjectDetailsLoading from "../loadingSkeletons/ProjectDetailsLoading";
+
 import ProjectDetailsLoadingTailwind from "../loadingSkeletons/ProjectDetailsLoadingTailwind";
 import ProjectDetailsAccordion from "./ProjectDetailsAccordion";
 

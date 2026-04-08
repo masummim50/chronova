@@ -137,7 +137,7 @@ const ProjectTasks = ({ project }: { project: projectType }) => {
         {tasks.length === 0 && (
           <div className="flex flex-col items-center justify-center py-5  rounded-[3rem] bg-neutral-900/10">
 
-            <NoItemFound title="Objective" />
+            <NoItemFound title="No Task found" />
           </div>
         )}
 

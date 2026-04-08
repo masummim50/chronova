@@ -342,6 +342,7 @@ const SubTaskCard = ({
             type="subtask"
             subtaskid={subtask._id}
             subtaskIndex={subtaskindex}
+          // setExpanded={}
           />
         ))}
       <span style={{ paddingLeft: 5, display: "block" }}>

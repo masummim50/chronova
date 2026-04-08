@@ -12,7 +12,7 @@ import { useAppDispatch } from "./app/redux/hooks";
 import Todos from "./app/components/todo/Todos";
 import Home from "./Home";
 import Projects from "./app/components/Projects";
-import CreateProject from "./app/components/project/CreateProject";
+
 import PersonalProjectHome from "./app/components/project/PersonalProjectHome";
 import TeamProjectHome from "./app/components/project/TeamProjectHome";
 import Journal from "./app/components/Journal";

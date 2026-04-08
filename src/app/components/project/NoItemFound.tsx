@@ -10,7 +10,7 @@ const NoItemFound = ({ title }: { title: string }) => {
         <div className="text-center space-y-1">
           <span className="text-[10px] font-black uppercase tracking-[0.2em] text-neutral-500">Inventory Empty</span>
           <h3 className="text-lg font-bold text-white tracking-tight">
-            No {title} Found
+            {title}
           </h3>
         </div>
       </div>
