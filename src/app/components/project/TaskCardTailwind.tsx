@@ -213,7 +213,7 @@ const TaskCardTailwind = ({
                                 taskid={task._id}
                                 taskIndex={taskIndex}
                                 type="task"
-                                setExpanded={setExpanded}
+                            // setExpanded={setExpanded}
                             />
                         )}
 
